@@ -1,0 +1,12 @@
+load("//printer:printer.bzl", "printer", "printer_with_label")
+#load("@src//printer:printer.bzl", "printer")
+
+printer(
+    name = "printer",
+    number = 2,
+)
+
+printer_with_label(
+    name = "printer_with_label",
+    mylabel = ":printer",
+)
